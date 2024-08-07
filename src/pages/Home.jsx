@@ -1,36 +1,32 @@
 import './MovieGrid.css';
-
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
+import { useFetch } from '../hooks/useFetch';
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Home = () => {
-    const [topMovies, setTopMovies] = useState([])
-
-    const getTopRatedMovies = async (url) => {
-        const res = await fetch(url)
-        const data = await res.json()
-
-        setTopMovies(data.results);
-    };
+    const [topMoviesUrl, setTopMoviesUrl] = useState(null);
+    const { data: topMovies, loading, error } = useFetch(topMoviesUrl);
 
     useEffect(() => {
-
-        const topRateUrl = `${moviesURL}top_rated?${apiKey}`
-        getTopRatedMovies(topRateUrl);
-    }, [])
+        const topRateUrl = `${moviesURL}top_rated?${apiKey}`;
+        setTopMoviesUrl(topRateUrl);
+    }, []);
 
     return (
         <main className='container'>
             <h2 className='title'>Melhores Filmes:</h2>
             <section className='movies-container'>
-                {topMovies.length === 0 && <p>Carregando...</p>}
-                {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
+                {loading && <p>Carregando...</p>}
+                {error && <p>Ocorreu um erro: {error.message}</p>}
+                {topMovies && topMovies.map((movie) => (
+                    <MovieCard key={movie.id} movie={movie} />
+                ))}
             </section>
         </main>
-    )
+    );
 }
 
-export default Home
+export default Home;
