@@ -1,0 +1,36 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App[data-theme="light"] {
+  --background-color: #f6f6f6;
+  --primary-text-color: #0a0a0a;
+  --secondary-text-color: #ffffff;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
+  --primary-color-link: #a17e00;
+  --secundary-color-link: #d1af35;
+}
+
+.App[data-theme="dark"] {
+  --background-color: #0a0a0a;
+  --primary-text-color: #f6f6f6;
+  --secondary-text-color: #0a0a0a;
+  --toggle-bg: #63676e;
+  --toggle-fg: #00a6ff;
+  --primary-color-link: #F7d354;
+  --secundary-color-link: #b8930c;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color-link);
+  transition: 0.5s;
+}
+
+a:hover {
+  color: var(--secundary-color-link);
+}
