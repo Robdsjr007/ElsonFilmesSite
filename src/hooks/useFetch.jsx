@@ -11,7 +11,7 @@ export const useFetch = (url) => {
             try {
                 const res = await fetch(url);
                 const json = await res.json();
-                setData(json.results);
+                setData(json.results ? json.results : json);
             } catch (err) {
                 setError(err);
             } finally {
@@ -23,8 +23,6 @@ export const useFetch = (url) => {
             fetchData();
         }
     }, [url]);
-
-    console.log(data)
 
     return { data, loading, error };
 };

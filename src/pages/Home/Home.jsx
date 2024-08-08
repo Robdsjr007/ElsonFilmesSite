@@ -1,7 +1,7 @@
-import './MovieGrid.css';
+import '../MovieGrid.css';
 import { useState, useEffect } from 'react';
-import MovieCard from '../components/MovieCard';
-import { useFetch } from '../hooks/useFetch';
+import MovieCard from '../../components/MovieCard';
+import { useFetch } from '../../hooks/useFetch';
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;

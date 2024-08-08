@@ -1,0 +1,38 @@
+.moviePage {
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.moviePage svg {
+    font-size: 1.5rem;
+    color: var(--primary-color-link);
+}
+
+.tagLine {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.info {
+    margin-bottom: 1.5rem;
+}
+
+.info h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.description {
+    padding-bottom: 10rem;
+}
+
+.description p {
+    line-height: 1.4rem;
+
+}

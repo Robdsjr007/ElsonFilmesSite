@@ -6,9 +6,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import useLocalStorage from 'use-local-storage'
 
 //pages
-import Search from './pages/Search.jsx'
-import Movies from './pages/Movies.jsx'
-import Home from './pages/Home.jsx'
+import Search from './pages/Search/Search.jsx'
+import Movies from './pages/Movies/Movies.jsx'
+import Home from './pages/Home/Home.jsx'
 
 //components
 import NavBar from './components/NavBar.jsx'

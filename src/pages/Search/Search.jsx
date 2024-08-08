@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react'
-import { useFetch } from '../hooks/useFetch';
+import { useFetch } from '../../hooks/useFetch';
 import { useSearchParams } from 'react-router-dom'
-import MovieCard from '../components/MovieCard'
+import MovieCard from '../../components/MovieCard'
 
 const searchUrl = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
-import "./MovieGrid.css";
+import "../MovieGrid.css";
 
 const Search = () => {
   const [searchParams] = useSearchParams();
