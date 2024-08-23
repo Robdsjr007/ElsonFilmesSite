@@ -2,6 +2,7 @@ import '../MovieGrid.css';
 import { useState, useEffect } from 'react';
 import MovieCard from '../../components/MovieCard';
 import { useFetch } from '../../hooks/useFetch';
+import styles from './Home.module.css';
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -16,7 +17,7 @@ const Home = () => {
     }, []);
 
     return (
-        <main className='container'>
+        <main className={styles.container}>
             <h2 className='title'>Melhores Filmes:</h2>
             <section className='movies-container'>
                 {loading && <p>Carregando...</p>}

@@ -1,21 +1,23 @@
 #navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 1rem 2rem;
     background-color: var(--background-color);
+    max-width: 100%;
+    padding: 1rem 0;
 }
 
 #navbar h2 a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1rem;
 }
 
 #navbar form {
     display: flex;
-    gap: .5rem;
-    width: 300px;
+    justify-content: center;
+    gap: .2rem;
 }
 
 #navbar .searchInput {
@@ -46,4 +48,15 @@
 #navbar form button:hover {
     background-color: transparent;
     color: var(--primary-color-link);
+}
+
+@media (max-width: 600px) {
+    #navbar h2 a {
+        font-size: 0.7rem;
+    }
+    
+    #navbar .searchInput {
+        max-width: 8rem;
+        font-size: .8rem;
+    }
 }
