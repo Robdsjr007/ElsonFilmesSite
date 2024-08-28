@@ -29,7 +29,13 @@ npm install
 ```bash
 npm run dev
 ```
-
+3. set your Deployment with Environment Variables .env
+```javascript
+VITE_API=https://api.themoviedb.org/3/movie/
+VITE_API_KEY=api_key=[value]
+VITE_SEARCH=https://api.themoviedb.org/3/search/movie/
+VITE_IMG=https://image.tmdb.org/t/p/w500/
+```
 ## Available commands
 
 * `nom run dev`: Start the app locally in your development environment, by default it will be in http://localhost:3000.
