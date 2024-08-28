@@ -32,7 +32,7 @@ npm run dev
 3. set your Deployment with Environment Variables .env
 ```javascript
 VITE_API=https://api.themoviedb.org/3/movie/
-VITE_API_KEY=api_key=[value]
+VITE_API_KEY=api_key=[your key´s value]
 VITE_SEARCH=https://api.themoviedb.org/3/search/movie/
 VITE_IMG=https://image.tmdb.org/t/p/w500/
 ```
